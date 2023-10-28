@@ -1,209 +1,1561 @@
 
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!-- saved from url=(0024)file:///E:/Football.html -->
+<docktype html>
+    <head>
+        <div class="pic1">
     <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Forecast</title>
-    
+    <link rel="stylesheet" type="text/css" href="football.css">
+  
+    <title>Football </title>
     <style>
-       body {
-  font-family: Arial, sans-serif;
-  color: #f1f4f2;
-  margin: 40;
-  padding: 10;
-
- background-image: url("https://images.unsplash.com/photo-1551234250-d88208c2ce14?auto=format&fit=crop&q=80&w=1331&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  height: 100vh; 
+        body{
+background-color: rgb(250, 244, 244);
+color: #080707;
+margin: 0%;
 }
-
-.main {
-  max-width: 700px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+   
+    
+h1 {
+  font-size: 50;
+  color: #2e6aa7;
+    
+ font-family: inherit;
+background-color:#ee97ca;
+ text-decoration: overline;
+ text-emphasis: none;
+ text-decoration: double;
+}
+p{
+  font-style: oblique;
+}
+.itemlist{
+  display: flex;
+    padding: 0%;
+    margin: 0%;
+    border: #f3efef;
+    border-style: double;
+}
+.itemlist > li{
+  display: inline-block ;
+  width: 100px;
+  height: 50px;
   text-align: center;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
+  padding-top: 7px;
+  margin-top: 7px;
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(250, 250, 250);
+  
+}
+.itemlist >.style1{
+  display: inline-block;
+  padding-left: 5px;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 7px;
+  color: #eee;}
+
+  .itemlist >.style2{
+    
+    display: inline-block;
+    padding-left: 5px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding-top: 7px;
+    margin-top: 30px;
+    font-size: 14px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 7px;
+    color: #eee;}
+
+  .style1{
+    padding: 0;
+   
+    background-color:#2e6aa7;
+    border-radius: 7px;
+
+}
+.style2{
+    background-color: #f10788;
+    border-radius: 7px;
+    border: 1px solid #0d6db7;
+    margin: 0;
+    padding: 0;
+    margin-top: 6;
+    align-items: center;
+    
+}
+.pic1 > img{
+  padding-left: 1%;
+  padding-top: 30px;
 }
 
-        .weather-panel {
-          background-image: url("https://images.unsplash.com/photo-1551234250-d88208c2ce14?auto=format&fit=crop&q=80&w=1331&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-          background-size: cover;
-          border-radius: 40px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-          text-align: center;
-          padding:10px;
-          margin: 20px;
-          display: flex;
-          flex-direction: column;
-          align-items: center; 
-          justify-content: center; 
-        }
-      
-        h1 {
-          font-size: 2em;
-          margin-bottom: 15px;
-          color: #fff;
-          font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-      
-        small {
-          font-size: 80%;
-          color: #ccc; 
-        }
-      
-        ul.forecast {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          padding: 0;
-          list-style: none;
-        }
-      
-        ul.forecast > li {
-          flex: 1;
-          border-top: 1px solid rgba(255, 255, 255, 0.5);
-          padding: 15px;
-          text-align: center;
-          background: rgba(255, 255, 255, 0.2); 
-          border-radius: 50px;
-          margin: 5px;
-        }
-      
-        h3 {
-          font-size: 1.8em; 
-          margin: 10px 0;
-          font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-      
-        p {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-      
-        .mi {
-          font-size: 3em; 
-          color: #fff; 
-        }
-      
-        .temperature {
-          font-size: 3.5em; 
-          color: #fff; 
-          margin: 10px 0;
-        }
-      
-        span {
-          font-size: 2em; 
-          display: block;
-          color: #fff; 
-        }
-      
-        small {
-          font-size: 70%;
-          font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-        @media (max-width: 768px) {
-      .col-xs-12 {
-        width: 100%;
-      }
+.container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  width: 1000px;
+}
+.container > .card-item > img {
+  width: 250px;
+  height: 250px;
+  margin-left: 50px;
+ 
+}
+.lines {
+  text-align: center;
+}
+h2{
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ color: #eee;
+ margin: 0;
+ text-decoration: underline;
+ border: #f2eded;
+ border-style: double;
+ padding-left: 50;
+}
 
-      .col-xs-6 {
-        width: 50%;
-      }
+.my-2{
+font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 50;
+  color: #eee;
+  background: linear-gradient( rgb(109, 33, 33), rgb(29, 29, 230))
+  
+  
+}
+                      
+.lines > p{
+  font-family: initial;
+  font-size: larger;
+ background:linear-gradient( rgb(100, 41, 41), #083ff3)
+}
 
-      .col-xs-offset-6 {
-        margin-left: 50%;
-      }
 
-      .col-xs-4 {
-        width: 33.33%;
-      }
 
-      .col-sm-2 {
-        width: 50%;
-      }
+.items{
+  background: linear-gradient( rgb(92, 27, 29), rgb(17, 17, 231))
 
-      .text-center {
-        text-align: center;
-      }
-    }
-      </style>
-      
-      
-      
-</head>
-<body>
+  
+}
+.text-center{
+  color: #eee;
+  margin: 10px;
+  padding:10px;
+align-items: center;
+}
+.lines{
+margin-left: 50;
+}
+.larger{
+font-size: larger;
+color: #eee;
+}
+.introduced{
+  background-image: url(https://wallpapercave.com/wp/wp4812270.jpg);
+  background-size: 1300px 700px;
+  background-repeat: no-repeat;
+}
+.card-item > img{
+  margin: 10px;
+  
+  
+}
+    </style>
 
-    <div class="main container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4 weather-panel">
-                    <div class="col-xs-6">
-                        <h1>Weather<br><br><br><small>Oct 19, 2023</small></h1>
-                        <p class="h3"><i class="mi mi-fw mi-lg mi-rain-heavy"></i> Rainy</p>
-                    </div>
-                    <div class="col-xs-6 col-xs-offset-6 text-center">
-                        <div class="h1 temperature">
-                            <span>12°</span>
-                            <br>
-                            <small>8° / 13°</small>
-                        </div>
-                    </div>
-                    
-                    <div class="col-xs-12">
-                        <ul class="list-inline row forecast">
-                            <li class="col-xs-4 col-sm-2 text-center">
-                                <h3 class="h5">Wed</h3>
-                                <p><i class="mi mi-fw mi-2x mi-cloud-sun"></i><br>9°/18°</p>
-                            </li>
-                            <li class="col-xs-4 col-sm-2 text-center">
-                                <h3 class="h5">Thu</h3>
-                                <p><i class="mi mi-fw mi-2x mi-sun"></i><br>12°/23°</p>
-                            </li>
-                            <li class="col-xs-4 col-sm-2 text-center">
-                                <h3 class="h5">Fri</h3>
-                                <p><i class="mi mi-fw mi-2x mi-cloud-sun"></i><br>14°/24°</p>
-                            </li>
-                            <li class="col-xs-4 col-sm-2 text-center">
-                                <h3 class="h5">Sat</h3>
-                                <p><i class="mi mi-fw mi-2x mi-rain"></i><br>15°/23°</p>
-                            </li>
-                            <li class="col-xs-4 col-sm-2 text-center">
-                                <h3 class="h5">Sun</h3>
-                                <p><i class="mi mi-fw mi-2x mi-rain-heavy"></i><br>15°/22°</p>
-                            </li>
-                            <li class="col-xs-4 col-sm-2 text-center">
-                                <h3 class="h5">Mon</h3>
-                                <p><i class="mi mi-fw mi-2x mi-clouds"></i><br>12°/17°</p>
-                            </li>
-                        </ul>
+</head><body >
+    
+   
+    <div class="items">
+        
+        <ul class="itemlist">
+            
+            <img src="https://cdn.imgbin.com/19/6/23/imgbin-fc-barcelona-european-union-trademark-football-player-2018-world-cup-fc-barcelona-Fn7w0Tq5JCZwcrqtwp934LaWA.jpg" alt="Image" height="60px" width="120px">
+            <li> Personal information </li>
+            <li> Awards & Records </li>
+            <li> FC career</li>
+            <li> International Career </li>
+            <li> International Goals  </li>
+            <li> Club  Goals </li>
+            <li> Notes </li>
+            <li> References </li>
+        
+            <li class="style2">Bibliography</li>
+            <li class="style1"> External links </li>
+           
+        </ul>
+   
+   
+   </div>
+
+
+          
+            
+  
+            <div>
+         
+               
+           
+                <img src="https://i.pinimg.com/1200x/9c/58/7c/9c587c04af440caa08e32f64611db89a.jpg" alt="Image" height="1100px" width="100%" >      
+
+            </div>
+            <div class ="introduced">
+           <h2 class="my-2">Family </h2>
+            
+               
+    <div class="container">
+                <div class="card-item">
+                    <img src="https://i0.wp.com/futballnews.com/wp-content/uploads/2022/11/Screenshot_20221109-140327.png?fit=436%2C482&ssl=1" width="200" height="200" >
+                    <div class="lines">
+                        <p class="text-center">Antonela Roccuzzo</p>
+                       
                     </div>
                 </div>
+
+            
+
+                <div class="card-item">
+                    <img src="https://pbs.twimg.com/media/Dt13_aDWwAANM5E?format=jpg&name=large" width="200" height="200" >
+                    <div class="lines">
+                        
+                        <p class="text-center">Thiago Messi</p>
+                    </div>
+                </div>
+
+            <div class="card-item">
+                <img src="https://www.citimuzik.com/wp-content/uploads/2022/12/305985996_103173655845789_9182816983427427373_n-1-819x1024.jpg" width="200" height="200" >
+                <div class="lines">
+                  
+                    <p class="text-center ">Mateo Messi</p>
+               
             </div>
         </div>
-    </div>
-
-    <!-- Include Bootstrap JS (You should download and host it or use a CDN link) -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</body>
-</html>
-
+            
+            
+            <div class="card-item">
+                <img src="data:image/jpeg;base64,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" width="200" height="200" >
+                <div class="lines">
+                    <p class="text-center">Ciro Messi</p>
+                   
+            </div>
         </div>
-      </div>
+            
+            
+            
     </div>
-  </div>
+
+
+
+
+
+
+
+
+
+
+  
+        
+       
+            
+        <h2 class="first head">  <span><u>Lionel Andrés Messi</u></span></h2>
+         <p class="larger">
+         also known as Leo Messi, is an <b>Argentine</b> professional footballer who most recently played as a forward for Ligue 1 club Paris Saint-Germain and captains the <b>Argentina</b> national team
+            Widely regarded as one of the greatest players of all time, Messi has won a record seven Ballon d'Or awards[note 2] and a record six European Golden Shoes, and in 2020 he was named to the Ballon d'Or Dream Team. Until leaving the club in 2021, he had spent his entire professional career with Barcelona, where he won a club-record 34 trophies, including ten La Liga titles, seven Copa del Rey titles and the UEFA Champions League four times.[note 3] With his country, he won the 2021 Copa América and the 2022 FIFA World Cup. A prolific goalscorer and creative playmaker, Messi holds the records for most goals in La Liga (474), most hat-tricks in La Liga (36) and the UEFA Champions League (eight), and most assists in La Liga (192) and the Copa América (17). He also has the most international goals by a South American male (102). Messi has scored over 800 senior career goals for club and country, and has the most goals by a player for a single club (672).<a href="https://en.wikipedia.org/wiki/Lionel_Messi">Wikipedia</a></p>
+        </div>
+
+        <hr color="black"><h1><u><em>Personal Information</em></u></h1>
+        <p><i>
+            <b>Date of birth</b>	24 June 1987 (age 35)<br>
+            <b>Place of birth</b>	Rosario, Santa Fe, Argentina<br>
+            <b>Height</b>	1.70 m (5 ft 7 in)<br>
+            <b>Position(s)</b>	Forward, attacking midfielder</i></p>
+            <hr color="black">
+            <h1><u><i>Awards & Records</i></u></h1>
+        <p>Rank <b>1<sup>st</sup><br></b>
+        Total Matches <b>1027</b><br>
+        Total Score <b>806</b><br>
+        Total Assits <b>357</b><br>
+        Total <abbr title="International Federation of Association Football"><a href="https://www.instagram.com/fifaworldcup/">FIFA</a></abbr> Men's player award <b>2</b><br>
+        Total Ballon d'Or  <b>7</b><br>
+        <hr color="black">
+        <h1><u><em><abbr title="Fooball Clubs">FC Career</abbr></em></u></h1>
+       
+        
+            <p><em>
+             1. <a href="https://www.instagram.com/explore/tags/grandoli/"> Grandoli</a> (Argentina) Years Club 1992-1995<br>
+             2. <a href="https://www.instagram.com/newells/"> Newell's Old Boys</a> (Argentina) 1995-2000<br>
+             3. <a href="https://www.instagram.com/fcbarcelona/">Barcelona</a> (Spain ) 2000 to 2021<br>
+             4. <a href="https://www.instagram.com/psg/"> Paris  Saint-Germain</a> (France) 2021-2023 <br>
+             5. <a href="https://www.instagram.com/intermiamicf/"> Inter Miami</a> (USA) 2023<br>
+                </em></p>
+                <hr color="black">
+                <h1><u><i>International Career</i></u></h1>
+                <hr color="black">
+               
+                <h3>2004–2005: Success at youth level:</h3>
+                <p>
+                              As a dual Argentine-Spanish national, Messi was eligible to play for the national team
+                            of both countries.[370] Selectors for Spain's Under-17 squad began pursuing him in
+                            2003 after Barcelona's director of football, Carles Rexach, alerted the 
+                            Spanish Football Federation to their young player. Messi declined the offer, having aspired
+                            to represent La Albiceleste since childhood. To further prevent Spain from 
+                            him, the Argentine Football Association organised two under-20 friendlies in June
+                                2004, against Paraguay and Uruguay, with the purpose of finalising his status as 
+                                an Argentina player in FIFA. Five days after his 17th birthday, on 29 June, 
+                            made his debut for his country against Paraguay, scoring once and providing two
+                            assists in their 8–0 victory. He was subsequently included in the squad for the
+                            South American Youth Championship, held in Colombia in February 2005. As he 
+                            lacked the stamina of his teammates, the result of his former growth hormone 
+                            , he was used as a substitute in six of the nine games. After being named man of the
+                            match against Venezuela, he scored the winning 2–1 goal in the crucial last match 
+                            Brazil, thereby securing their third-place qualification for the FIFA World Youth 
+                            Championship.
+                        </p>
+                <h3>2005–2006: Senior and World Cup debuts:</h3>
+                <p>
+                    In recognition of his achievements with the under-20 side, senior manager José Pékerman
+                     gave Messi his first call-up for a friendly against Hungary on 17 August 2005. Aged 18
+                     , Messi made his senior debut for Argentina in the Ferenc Puskás Stadium when he came
+                      on in the 63rd minute, only to be sent off after two minutes for a perceived foul 
+                      against Vilmos Vanczák, who had grabbed his shirt; Messi had struck the defender with
+                       his arm while trying to shake him off, which the referee interpreted as an 
+                       intentional elbowing, a contentious decision.[374] Messi was reportedly found
+                        weeping in the dressing room after his sending-off.[375] He returned to the team on
+                         3 September in their World Cup qualifier defeat to Paraguay, which he had declared
+                          his "re-debut" ahead of the match.[376] Messi started his first game in the next
+                           qualifying match against Peru, in which he was able to win a crucial penalty 
+                           that secured their victory. After the match, Pékerman described him as "a jewel".
+                           [377] He subsequently made regular appearances for the team ahead of Argentina's
+                            participation in the 2006 FIFA World Cup, scoring his first goal in a friendly
+                             against Croatia on 1 March 2006.[378] A hamstring injury sustained a week
+                              later jeopardised his presence in the World Cup, but he was nevertheless 
+                              selected for Pékerman's squad and regained fitness in time for the start of 
+                              the tournament.
+                </p>
+                <h3>2007–2008: Copa América final and Olympic gold:</h3>
+                <p>
+                    As Messi evolved into one of the best players in the world, he secured a place in Alfio
+                     Basile's starting line-up, as part of a team considered favourites to win the 2007
+                      Copa América, held in Venezuela.[61][388] He set up the game-winning goal of their
+                       4–1 victory over the United States in the opening match, before winning a penalty
+                        that led to the game-tying first strike of their 4–2 win in the next match against
+                         Colombia.[389][390] At the quarter-final stage, where the group winners faced
+                          Peru, he scored the second goal of a 4–0 victory that saw them through to the
+                           semi-final, during which he chipped the ball over Mexico's goalkeeper to ensure
+                            another 3–0 win.[388] In a surprise defeat, Argentina lost the final 3–0 to a
+                             Brazil squad that lacked several of the nation's best players.[391] Their
+                              unexpected loss was followed by much criticism in Argentina, though Messi 
+                              was mostly exempt due to his young age and secondary status to star player
+                               Juan Román Riquelme.[388] He was named the best young player of the 
+                               tournament by CONMEBOL.
+                </p>
+                <h3>2008–2011: Collective decline:</h3>
+                <p>
+                    From late 2008, the national team experienced a three-year period marked by poor
+                     performances.[388] Under manager Diego Maradona, who had led Argentina to World Cup
+                      victory as a player, the team struggled to qualify for the 2010 World Cup, securing 
+                      their place in the tournament only after defeating Uruguay 1–0 in their last
+                       qualifying match. Maradona was criticised for his strategic decisions, which 
+                       included playing Messi out of his usual position. In eight qualifying matches under
+                        Maradona's stewardship, Messi scored only one goal, netting the opening goal in
+                         the first such match, a 4–0 victory over Venezuela.[378][397] During that game,
+                          played on 28 March 2009, he wore Argentina's number 10 shirt for the first time,
+                           following the international retirement of Riquelme.[398] Overall, Messi scored 
+                           four goals in 18 appearances during the qualifying process.[378] Ahead of the
+                            tournament, Maradona visited Messi in Barcelona to request his tactical input;
+                             Messi then outlined a 4–3–1–2 formation with himself playing behind the two
+                              strikers, a playmaking position known as the enganche in Argentine football,
+                               which had been his preferred position since childhood.
+                </p>
+                <h3>2011–2013: Assuming the captaincy:</h3>
+                <p>
+
+                    After Argentina's unsuccessful performance in the Copa América, Batista was replaced
+                     by Alejandro Sabella. Upon his appointment in August 2011, Sabella awarded the
+                      24-year-old Messi the captaincy of the squad, in accord with then-captain Javier
+                      Mascherano. Reserved by nature, Messi went on to lead his squad by example as their
+                       best player, while Mascherano continued to fulfil the role of the team's on-field
+                        leader and motivator.[405][406] In a further redesign of the team, Sabella 
+                        dismissed Tevez and brought in players with whom Messi had won the World Youth 
+                        Championship and Olympic Games. Now playing in a free role in an improving team,
+                         Messi ended his goal drought by scoring during their first World Cup qualifying
+                          match against Chile on 7 October, his first official goal for Argentina in 
+                          two-and-a-half years.
+                          <br><br>
+
+                    Under Sabella, Messi's goalscoring rate drastically increased; where he had scored 
+                    only 17 goals in 61 matches under his previous managers, he scored 25 times in 32 
+                    appearances during the following three years.[378][405] He netted a total of 12 goals
+                     in 9 games for Argentina in 2012, equalling the record held by Gabriel Batistuta for
+                      the most goals scored in a calendar year for their country.[407] His first international
+                       hat-trick came in a friendly against Switzerland on 29 February 2012, followed by two more
+                        hat-tricks over the next year-and-a-half in friendlies against Brazil and Guatemala. Messi
+                         then helped the team secure their place in the 2014 World Cup with a 5–2 victory over Paraguay
+                          on 10 September 2013 when he scored twice from penalty kicks, taking his international tally 
+                          to 37 goals to become Argentina's second-highest goalscorer behind Batistuta. Overall, he had
+                           scored a total of 10 goals in 14 matches during the qualifying campaign.[378][408] Concurrently
+                            with his bettered performances, his relationship with his compatriots improved, as he gradually
+                             began to be perceived more favourably in Argentina.
+                </p>
+                <h3>2014–2015: World Cup and Copa América finals:</h3>
+                <p>
+                    Ahead of the World Cup in Brazil, doubts persisted over Messi's form, as he finished an
+                     unsuccessful and injury-plagued season with Barcelona. At the start of the tournament,
+                      however, he gave strong performances, being elected man of the match in their first four matches.
+                       In his first World Cup match as captain, he led them to a 2–1 victory over Bosnia and Herzegovina;
+                        he helped create Sead Kolašinac's own goal and scored their second strike after a dribble past three
+                         players, his first World Cup goal since his debut in the tournament eight years earlier.
+                         During the second match against Iran, he scored an injury-time goal from 25 yards out to end
+                          the game in a 1–0 win, securing their qualification for the knockout phase.[411] He scored
+                           twice in the last group match, a 3–2 victory over Nigeria, his second goal coming from a
+                            free kick, as they finished first in their group.[412] Messi assisted a late goal in extra 
+                            time to ensure a 1–0 win against Switzerland in the round of 16, and played in the 1–0
+                             quarter-final win against Belgium as Argentina progressed to the semi-final of the World Cup
+                              for the first time since 1990.[413][414] Following a 0–0 draw in extra time, they eliminated 
+                              the Netherlands 4–2 in a penalty shootout to reach the final, with Messi scoring his team's
+                               first penalty.
+                               <br>
+                               <br>
+                               Billed as Messi versus Germany, the world's best player against the best team, the final
+                                was a repeat of the 1990 final featuring Diego Maradona.[416] Within the first half-hour,
+                                 Messi had started the play that led to a goal, but it was ruled offside. He missed several 
+                                 opportunities to open the scoring throughout the match, in particular at the start of the 
+                                 second half when his breakaway effort went wide of the far post. Substitute Mario Götze finally 
+                                 scored in the 113th minute, followed in the last minute of extra time by a free kick that Messi 
+                                 sent over the net, as Germany won the match 1–0 to claim the World Cup.[417] At the conclusion of
+                                  the final, Messi was awarded the Golden Ball as the best player of the tournament. In addition 
+                                  to being the joint third-highest goalscorer, with four goals and an assist, he created the most
+                                   chances, completed the most dribbling runs, made the most deliveries into the penalty area and
+                                    produced the most throughballs in the competition.[409][418] However, his selection drew 
+                                    criticism due to his lack of goals in the knockout round; FIFA President Sepp Blatter expressed
+                                     his surprise, while Maradona suggested that Messi had undeservedly been chosen for marketing
+                                      purposes.
+                                      <br>
+                                      <br>
+                                      As Messi evolved from the team's symbolic captain into a genuine leader, he led Argentina 
+                                       the knockout stage as group winners.[424] In the quarter-final, they created numerous chances, 
+                                       including a rebound header by Messi, but were repeatedly denied by Colombia's goalkeeper, and
+                                        ultimately ended the match scoreless, leading to a 5–4 penalty shootout in their favour, with
+                                         Messi netting his team's first spot kick.[425] At the semi-final stage, Messi excelled as a
+                                          playmaker as he provided three assists and helped create three more goals in his side's 6–1 victory
+                                           over Paraguay, receiving applause from the initially hostile crowd.[424] Argentina started
+                                            the final as the odds-on title favourites, but were defeated by Chile 4–1 in a penalty shootout
+                                             after a 0–0 extra-time draw. Faced with aggression from opposing players, including taking 
+                                             a boot to the midriff, Messi played below his standards, though he was the only Argentine to
+                                              successfully convert his penalty.[426] At the close of the tournament, he was reportedly 
+                                              selected to receive the Most Valuable Player award but rejected the honour.[427] As Argentina
+                                               continued a trophy drought that began in 1993, the World Cup and Copa América defeats 
+                                               again brought intense criticism for Messi from Argentine media and fans.
+                </p>
+                <h3>2016–2017: Third Copa América final, first retirement, and return:</h3>
+                <p>
+                    On 28 March 2017, Messi was suspended for four international games for insulting an assistant referee in a game against Chile on 23 March 2017.
+                     He was also fined CHF 10,000.On 5 May, Messi's four match ban as well as his 10,000 CHF fine was
+                      lifted by FIFA after Argentina Football Association appealed against his suspension, which meant 
+                       could now play Argentina's remaining World Cup Qualifiers.[453] Argentina's place in the 2018 
+                       World Cup was in jeopardy going into their final qualifying match as they were sixth in their 
+                       group, outside the five possible CONMEBOL World Cup qualifying spots, meaning they risked 
+                       failing to qualify for the World Cup for the first time since 1970. On 10 October, Messi led
+                        his country to World Cup qualification in scoring a hat-trick as Argentina came from behind 
+                        to defeat Ecuador 3–1 away; Argentina had not defeated Ecuador in Quito since 2001.
+                         Messi's three goals saw him become the joint all-time leading scorer in CONMEBOL 
+                         world Cup qualifiers with 21 goals, alongside Uruguay's Luis Suárez, overtaking the previous
+                          record which was held by compatriot Hernán Crespo.[454]
+                </p>
+                <h3>
+                    2018: World Cup:
+                </h3>
+                <p>
+                    In Argentina's final group match against Nigeria at the Krestovsky Stadium,
+                     Saint Petersburg on 26 June, Messi scored the opening goal in an eventual 2–1 victory,
+                      becoming the third Argentine after Diego Maradona and Gabriel Batistuta to score in
+                       three different World Cups; he also became the first player to score in the World Cup
+                        in his teens, twenties, and his thirties.[462] A goal of the tournament contender,
+                         Messi received a long pass from midfield and controlled the ball on the run with two
+                          touches before striking it across goal into the net with his weaker right foot.[463][464] 
+                          He was awarded Man of the Match.[465] Argentina progressed to the second round as group
+                           runners-up behind Croatia.[466] In the round of 16 match against eventual champions France
+                            on 30 June, Messi set up Gabriel Mercado's and Sergio Agüero's goals in a 3–4 defeat,
+                             which saw Argentina eliminated from the World Cup.[467] With his two assists in his team's
+                              second round fixture, Messi became the first player to provide an assist in the last
+                               four World Cups, and also became the first player to provide two assists in a match
+                                for Argentina since Maradona had managed the same feat against South Korea in 1986.<br><br>
+
+
+Following the tournament, Messi stated that he would not participate in Argentina's friendlies against Guatemala and
+ Colombia in September, and commented that it would be unlikely that he would represent his nation for
+  the remainder of the calendar year. Messi's absence from the national team and his continued failure
+   to win a title with Argentina prompted speculation in the media that Messi might retire from 
+   international football once again.[470] In March 2019, however, he was called up to the Argentina 
+   squad once again for the team's friendlies against Venezuela and Morocco later that month.[471] A
+    conversation with Lionel Scaloni and his idol Pablo Aimar made Messi reconsider his decision to 
+    retire.[472] He made his international return on 22 March, in a 3–1 friendly defeat to Venezuela,
+     in Madrid.
+                </p>
+                <h3>2019–2020: Copa América third-place and suspension:</h3>
+
+                <p>
+                    On 21 May, Messi was included in Lionel Scaloni's final 23-man Argentina squad for the 2019 Copa América
+                    .[474] In Argentina's second group match of the tournament on 19 June, Messi scored the equalising goal
+                     from the penalty spot in a 1–1 draw against Paraguay.[475] After coming under criticism in the media 
+                     over his performance following Argentina's 2–0 victory over Venezuela in the quarter-finals at the 
+                     Maracanã Stadium on 28 June, Messi commented that it had not been his best Copa América, while also
+                      criticising the poor quality of the pitches.[476] Following Argentina's 2–0 defeat to hosts Brazil
+                       in the semi-finals on 2 July, Messi was critical of the refereeing during the match,[477][478] and
+                        alleged the competition was "set up" for Brazil to win.[479]
+                    <br><br>
+
+In the third-place match against Chile on 6 July, Messi set-up Agüero's opening goal from a free kick in an eventual 
+2–1 win, to help Argentina capture the bronze medal; however, he was sent off along with Gary Medel in
+ the 37th minute of play, after being involved in an altercation with the Chilean defender.[480] Following
+  the match, Messi refused to collect his medal, and implied in a post-match interview that his comments
+   following the semi-final led to his sending off.[481] Messi later issued an apology for his comments,
+    but was fined $1,500 and was handed a one-match ban by CONMEBOL, which ruled him out of Argentina's 
+    next World Cup qualifier.[482] On 2 August, Messi was banned for three months from international 
+    football and was fined $50,000 by CONMEBOL for his comments against the referee's decisions; this ban 
+    meant he would miss Argentina's friendly matches against Chile, Mexico and Germany in September and
+     October.[483] On 15 November, Messi played in the 2019 Superclásico de las Américas versus Brazil,
+      scoring the winning goal by a rebound of his saved penalty.[484] On 8 October 2020, Messi scored 
+      a penalty in a 1–0 victory against Ecuador, giving Argentina a winning start to their 2022 World Cup
+       qualifying campaign.[485]
+                </p>
+                <h3>2021–2022: Copa América and World Cup triumph:</h3>
+                <p>
+                    On 14 June 2021, Messi scored from a free kick in a 1–1 draw against Chile in Argentina's 
+                    opening group match of the 2021 Copa América in Brazil.[487] On 21 June, Messi played in
+                     his 147th match as he equalled Javier Mascherano's record for most appearances for Argentina
+                      in a 1–0 win over Paraguay in their third game of the tournament.[488] A week later, he broke
+                       the record for most appearances in an Argentina shirt when he featured in a 4–1 win against
+                        Bolivia in his team's final group match, assisting Papu Gómez's opening goal and later scoring 
+                        two.[489] On 3 July, Messi assisted twice and scored from a free-kick in a 3–0 win over Ecuador
+                         in the quarter-finals of the competition.[490] On 6 July, in a 1–1 draw in the semi-finals
+                          against Colombia, Messi made his 150th appearance for his country and registered his fifth 
+                          assist of the tournament, a cut-back for Lautaro Martínez, matching his record of nine goal
+                           contributions in a single tournament from five years earlier; he later netted his spot kick 
+                           in Argentina's eventual 3–2 penalty shoot-out victory to progress to his fifth international
+                            final.[491][492] On 10 July, Argentina defeated hosts and defending champions Brazil 1–0 
+                            in the final, giving Messi his first major international title and Argentina's first since
+                             1993, as well as his nation's joint record 15th Copa América overall.[493][494] Messi was
+                              directly involved in 9 out of the 12 goals scored by Argentina, scoring four and assisting
+                               five; he was named the player of the tournament for his performances, an honour he shared
+                                with Neymar. He also finished as the tournament's top scorer with four goals tied with
+                                 Colombia's Luis Díaz, with the Golden Boot awarded to Messi as he had more assists.
+                                 <br><br>
+                                 In the 2022 FIFA World Cup final on 18 December, Messi made his record 26th World Cup match
+                                 appearance at Lusail Stadium. He scored Argentina's opening goal with a penalty, becoming 
+                                 in the process the first player since the last-16 round was introduced in 1986 to score a goal
+                                  in each round of a single World Cup edition.[509] After Argentina's eventual two-goal lead was
+                                   erased by France forward Kylian Mbappé, who scored twice inside two minutes, Messi would score
+                                    again in extra-time to restore Argentina's lead, before Mbappé again drew France level. Tied 
+                                    3–3 after extra-time, the match went to a penalty shoot-out. Messi scored Argentina's first goal
+                                     in the shoot-out, with Argentina eventually winning 4–2, ending the nation's 36-year wait for
+                                      the trophy.[510] Messi received the Golden Ball for player of the tournament, becoming the 
+                                      first player to win it twice. He finished second in the Golden Boot race with seven goals in
+                                       seven games, one behind Mbappé.[509] With his appearance and two goals in the final, Messi 
+                                       overtook Matthaüs as the player with most appearances at the World Cup (26), and Pelé as the
+                                        player with most direct goal contributions at the World Cup (21 – 13 goals and 8 assists).
+                                        [511] The championship game was widely acclaimed as one of the best of all time, with media
+                                         coverage heavily framing it as a duel between Messi and Mbappé.[512][513][514][515] 
+                                         Following the game, Messi confirmed that he had no plans to retire from the national team
+                                         , saying "I want to continue playing as a champion"
+                </p>
+                <hr color="black">
+
+                <h1><u><i>International Goals by National Team ,Year $ Competition</i></u></h1>
+                <hr color="black">
+                       <table cellpadding="5" cellspacing="3" border="3px" bgcolor="#808080">
+
+        <tr bgcolor="#cccccc">
+            <th rowspan="2" bgcolor="#A9A9A9"> Team</th>
+            <th rowspan="2" bgcolor="#A9A9A9">Year</th>
+            <th colspan="2" bgcolor="#A9A9A9">Competitive</th>
+            <th colspan="2" bgcolor="#A9A9A9">Freindly</th>
+            <th colspan="2" bgcolor="#A9A9A9">Total</th>
+            
+        </tr>
+        <tr bgcolor="#cccccc">
+            <th bgcolor="#A9A9A9">Apps</th>
+            <th bgcolor="#A9A9A9">Goals</th>
+            <th bgcolor="#A9A9A9">Apps</th>
+            <th bgcolor="#A9A9A9">Goals</th>
+            <th bgcolor="#A9A9A9">Apps</th>
+            <th bgcolor="#A9A9A9">Goals</th>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <th rowspan="3" bgcolor="#A9A9A9">Argentina U20</th>
+            <td>2004</td>
+            <th colspan="2">-</th>
+            <td>2</td>
+            <td>3</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2005</td>
+            <td>16</td>
+            <td>11</td>
+            <th colspan="2">-</th>
+            <td>16</td>
+            <td>11</td>
+        </tr>
+        <tr bgcolor="#A9A9A9">
+            <th>Total</th>
+            <th>16</th>
+            <th>11</t>
+            <th>2</th>
+            <th>3</th>
+            <th>18</th>
+            <th>14</th>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <th rowspan="2" bgcolor="#A9A9A9">Argentina U23</th>
+            <td>2008</td>
+             <td>5</td>
+            <td>2</td>
+            <th colspan="2">-</th>
+            <td>5</td>
+            <td>2</td>
+        </tr>
+        <tr bgcolor="#A9A9A9" >
+            <th>Total</th>
+            <th>5</th>
+            <th>2</th>
+            <th>0</th>
+            <th>0</th>
+            <th>5</th>
+            <th>2</th>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <th rowspan="20" bgcolor="#A9A9A9">Argentina </th>
+            <td>2005</td>
+             <td>3</td>
+            <td>0</td>
+            <td>2</td>
+            <td>0</td>
+            <td>5</td>
+            <td>0</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2006</td>
+            <td>3</td>
+            <td>1</td>
+            <td>4</td>
+            <td>1</td>
+            <td>7</td>
+            <td>2</td>
+            
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2007</td>
+            <td>10</td>
+            <td>4</td>
+            <td>4</td>
+            <td>2</td>
+            <td>14</td>
+            <td>6</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2008</td>
+            <td>6</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>8</td>
+            <td>2</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2009</td>
+            <td>8</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+            <td>10</td>
+            <td>3</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2010</td>
+            <td>5</td>
+            <td>0</td>
+            <td>5</td>
+            <td>2</td>
+            <td>10</td>
+            <td>2</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2011</td>
+            <td>8</td>
+            <td>2</td>
+            <td>5</td>
+            <td>2</td>
+            <td>13</td>
+            <td>4</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2012</td>
+            <td>5</td>
+            <td>5</td>
+            <td>4</td>
+            <td>7</td>
+            <td>9</td>
+            <td>12</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2013</td>
+            <td>5</td>
+            <td>3</td>
+            <td>2</td>
+            <td>3</td>
+            <td>7</td>
+            <td>6</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2014</td>
+            <td>7</td>
+            <td>4</td>
+            <td>7</td>
+            <td>4</td>
+            <td>14</td>
+            <td>8</td>
+    </tr>
+        
+       
+       <tr bgcolor="#cccccc">
+        <td>2015</td>
+        <td>6</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>7</td>
+        <td>6</td>
+       </tr>
+       <tr bgcolor="#cccccc">
+            <td>2016</td>
+            <td>10</td>
+            <td>8</td>
+            <td>1</td>
+            <td>0</td>
+            <td>11+</td>
+            <td>8</td>
+       </tr>
+       <tr bgcolor="#cccccc">
+            <td>2017</td>
+            <td>5</td>
+            <td>4</td>
+            <td>2</td>
+            <td>0</td>
+            <td>7</td>
+            <td>4</td>
+       </tr>
+       <tr bgcolor="#cccccc">
+        <td>2018</td>
+        <td>4</td>
+        <td>1</td>
+        <td>1</td>
+        <td>3</td>
+        <td>5</td>
+        <td>4</td>
+    </tr>
+    <tr bgcolor="#cccccc">
+        <td>2019</td>
+        <td>6</td>
+        <td>1</td>
+        <td>4</td>
+        <td>4</td>
+        <td>10</td>
+        <td>5</td> 
+    
+    </tr >
+    <tr bgcolor="#cccccc">
+        <td>2020</td>
+        <td>4</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>4</td>
+        <td>1</td> 
+    </tr>
+    <tr bgcolor="#cccccc">
+        <td>2021</td>
+        <td>16</td>
+        <td>9</td>
+        <td>0</td>
+        <td>0</td>
+        <td>16</td>
+        <td>9</td>
+    </tr>
+    <tr bgcolor="#cccccc">
+        <td>2022</td>
+        <td>10</td>
+        <td>8</td>
+        <td>4</td>
+        <td>8</td>
+        <td>14</td>
+        <td>18</td>
+    </tr>
+    <tr bgcolor="#cccccc">
+        <td>2023</td>
+        <td>0</td>
+        <td>0</td>
+        <td>2</td>
+        <td>4</td>
+        <td>2</td>
+        <td>4</td>
+    </tr>
+
+    <tr bgcolor="#A9A9A9">
+        <th>Total</th>
+        <th>121</th>
+        <th>54</th>
+        <th>53</th>
+        <th>48</th>
+        <th>174</th>
+        <th>102</th>
+    </tr>
+    <tr bgcolor="#cccccc">
+        <th colspan="2" bgcolor="#A9A9A9"> Career Total</th>
+        <th bgcolor="#A9A9A9">142</th>
+        <th bgcolor="#A9A9A9">67</th>
+        <th bgcolor="#A9A9A9">55</th>
+        <th bgcolor="#A9A9A9">51</th>
+        <th bgcolor="#A9A9A9">197</th>
+        <th bgcolor="#A9A9A9">118</th>
+
+</table>
+<hr color="black">
+<h1><u><i>Club Career</i></u></h1>
+<h2><u>Barcelona</u></h2>
+<br>
+<h3>2003–2005: Rise to the first team:</h3>
+<p>
+     During the 2003–04 season, his fourth with Barcelona, Messi rapidly progressed through 
+    the club's ranks, debuting for four youth teams in a single campaign.[31] After being named 
+    player of the tournament in four international pre-season competitions with the Juveniles B, 
+    he played only one official match with the team before being promoted to the Juveniles A, where he
+     scored 18 goals in 11 league games.[32][33] Messi was then one of several youth players called up
+      to strengthen a depleted first team during the international break. French winger Ludovic Giuly 
+      explained how Messi caught the eye in a training session with Frank Rijkaard's first team: "He
+       destroyed us all... They were kicking him all over the place to avoid being ridiculed by this kid,
+        he just got up and kept on playing. He would dribble past four players and score a goal. Even the 
+        team's starting centre-backs were nervous. He was an alien.
+        <br>
+        <br>
+        During the 2004–05 season, Messi was a guaranteed starter for the B team, playing 17 games throughout 
+        the campaign and scoring on six occasions.[37][43] Since his debut the previous November, he had not
+         been called up to the first team again, but in October 2004, the senior players asked manager Frank
+          Rijkaard to promote him.[37] Since Ronaldinho already played on the left wing, Rijkaard moved Messi 
+          from his usual position onto the right flank (though initially against the player's wishes), allowing 
+          him to cut into the centre of the pitch and shoot with his dominant left foot.[44][45] Messi made
+           his league debut during the next match on 16 October, against Espanyol at Estadi Olímpic Lluís 
+           Companys in Montjuïc, coming on in the 82nd minute.[22] At 17 years, three months, and 22 days 
+           old, he was at the time the youngest player to represent Barcelona in an official competition.
+           [39] As a substitute player, he played 244 minutes in nine matches for the first team that season,
+            including his debut in the UEFA Champions League against Shakhtar Donetsk.[43] He scored his
+             first senior goal on 1 May 2005, against Albacete, from an assist by Ronaldinho, becoming – at
+              that time – the youngest-ever scorer for the club.[44][46] Barcelona, in their second season 
+              under Rijkaard, won the league for the first time in six years.
+              <h3>2005–2008: Becoming a starting eleven player:</h3>
+              <p>
+                On 24 June, his 18th birthday, Messi signed his first contract as a senior team player. It made him
+                 a Barcelona player until 2010, two years less than his previous contract, but his buyout clause
+                  increased to €150 million.[41] His breakthrough came two months later, on 24 August, during the
+                   Joan Gamper Trophy, Barcelona's pre-season competition. A starter for the first time, he gave 
+                   a well-received performance against Fabio Capello's Juventus, receiving an ovation from the Camp
+                    Nou.[48] Capello sought to take Messi to Juventus on loan, but Inter Milan offered to pay his 
+                    €150 million buyout clause and triple his wages.[49] According to then-president Joan Laporta, 
+                    it was the only time the club faced a real risk of losing Messi, but he ultimately decided to 
+                    stay.[50] On 16 September, his contract was updated for the second time in three months and 
+                    extended to 2014
+                    <br>
+                    <br>
+                    After Ronaldinho lost form, Messi became Barça's new star player at only 20 years old, receiving 
+                    the nickname "Messiah" from the Spanish media.[19][73][74] His efforts in 2007 also earned him 
+                    award recognition; journalists voted him the third-best player of the year for the 2007 Ballon d'Or,
+                     behind Kaká and runner-up Cristiano Ronaldo, while international managers and national team captains 
+                     voted him second for the FIFA World Player of the Year award, again behind Kaká.[75][76] Although he
+                      managed to score 16 goals during the 2007–08 campaign,[77] the second half of his season was again
+                       marred by injuries after he suffered a torn hamstring on 15 December.[78] He returned to score 
+                       twice in their away victory against Celtic in the last 16 round of the Champions League, becoming 
+                       the competition's top scorer at that point with six goals,[79] but reinjured himself during the
+                        return leg on 4 March 2008. Rijkaard had fielded him despite warning from the medical staff, 
+                        leading captain Carles Puyol to criticise the Spanish media for pressuring Messi to play every
+                         match.[78] Barcelona finished the season without trophies, eliminated in the Champions League
+                          semi-finals by the eventual champions, Manchester United, and placed third in the league.[80]
+              </p>
+              <h3>2008–09: First treble:</h3>
+              <p>
+                As the season's Champions League top scorer with nine goals, the youngest in the tournament's history,[91]
+                 Messi scored two goals and assisted two more to ensure a 4–0 quarter-final victory over Bayern Munich.
+                 [87] He returned as a false nine during the final on 27 May in Rome against Manchester United. 
+                 Barcelona were crowned champions of Europe by winning the match 2–0, the second goal coming from 
+                 a Messi header over goalkeeper Edwin van der Sar. Barcelona thus achieved the first treble in the
+                  history of Spanish football.[92] This success was reflected in a new contract, signed on 18 
+                  September, which committed Messi to the club through 2016 with a new buyout clause of €250 million, 
+                  while his salary increased to €12 million.[
+              </p>
+              <h3>2009–10: First Ballon d'Or:</h3>
+              <p>
+                His team's prosperity continued into the second half of 2009, as Barcelona became the first club to achieve the 
+                , winning six top-tier trophies in a single year.[93] After victories in the Supercopa de España 
+                 UEFA Super Cup in August, Barcelona won the FIFA Club World Cup against Estudiantes de La Plata 
+                  19 December, with Messi scoring the winning 2–1 goal with his chest.[94] At 22 years old, Messi 
+                   the Ballon d'Or and the FIFA World Player of the Year award, both times by the biggest voting 
+                    in each trophy's history
+              </p>
+              <h3>2010–2011: Fifth La Liga title and third Champions League:</h3>
+              <p>
+                As Messi developed into a combination of a number 8 (a creator), a 9 (scorer), and a 10 (assistant),[116] 
+                he scored an unprecedented 73 goals and provided 29 assists in all club competitions during the
+                 2011–12 season, producing a hat-trick or more on 10 occasions.[117][118][119] He began the 
+                 campaign by helping Barcelona win both the Spanish and European Super Cups; in the Supercopa 
+                 de España, he scored three times to achieve a 5–4 aggregate victory over Real Madrid, overtaking
+                  Raúl as the competition's all-time top scorer with eight goals.[120][121] At the close of the year,
+                   on 18 December, he scored twice in the FIFA Club World Cup final, a 4–0 victory over Santos,
+                    earning the Golden Ball as the best player of the tournament, as he had done two years previously.
+                    [122] For his efforts in 2011, he again received the FIFA Ballon d'Or, becoming only the fourth
+                     player in history to win the Ballon d'Or three times, after Johan Cruyff, Michel Platini, and 
+                     Marco van Basten.[123] Additionally, he won the inaugural UEFA Best Player in Europe Award, a 
+                     revival of the old-style Ballon d'Or.[124] By then, Messi was already widely considered one of
+                      the best footballers in history, alongside players like Diego Maradona and Pelé.[2
+              </p>
+              <h3>2012: A record-breaking year:</h3>
+              <p>
+
+                As Messi maintained his goalscoring form into the second half of the season, the year 2012 saw
+                 him break several longstanding records. On 7 March, two weeks after scoring four goals in a league
+                  fixture against Valencia, he scored five times in a Champions League last 16-round match against
+                  Bayer Leverkusen, an unprecedented achievement in the history of the competition.[126][127] In
+                   addition to being the joint top assist provider with five assists, this feat made him top scorer
+                    with 14 goals, tying José Altafini's record from the 1962–63 season, as well as becoming only 
+                    the second player after Gerd Müller to be top scorer in four campaigns.[128][129] Two weeks later
+                    , on 20 March, Messi became the top goalscorer in Barcelona's history at 24 years old, overtaking 
+                    the 57-year record of César Rodríguez's 232 goals with a hat-trick against Granada.
+              </p>
+              <h3>2013–2014: Messidependencia:</h3>
+              <p>
+                Barcelona had virtually secured their La Liga title by the start of 2013, eventually equalling Real Madrid's 
+                100-point record of the previous season. However, their performances deteriorated in the second half
+                 of the 2012–13 campaign, concurrently with Vilanova's absence due to ill health.[144] After losing 
+                 successive Clásicos, including the Copa del Rey semi-finals, they were nearly eliminated in the first
+                  knockout round of the Champions League by AC Milan, but a revival of form in the second leg led to
+                   a 4–0 comeback, with two goals and an assist from Messi.[145] Now in his ninth senior season with 
+                   Barcelona, Messi signed a new contract on 7 February, committing himself to the club through 2018,
+                    while his fixed wage rose to €13 million.[146][147] He wore the captain's armband for the first 
+                    time a month later, on 17 March, in a league match against Rayo Vallecano; by then, he had become
+                     the team's tactical focal point to a degree that was arguably rivalled only by former Barcelona 
+                     players Josep Samitier, László Kubala and Johan Cruyff.[148] Since his evolution into a false 
+                     nine three years earlier, his input into the team's attack had increased; from 24% in their
+                      treble-winning campaign, his goal contribution rose to more than 40% that season.
+              </p>
+              <h3>2014–15: Second treble:</h3>
+              <p>
+                In the Champions League, Messi scored twice and set up another in their 3–0 semi-final victory over 
+                Bayern Munich, now under the stewardship of Guardiola.[184] His second goal, which came only three
+                 minutes after his first, saw him chip the ball over goalkeeper Manuel Neuer after his dribble past
+                  Jérôme Boateng had made the defender drop to the ground; it went viral, becoming the year's most 
+                  tweeted about sporting moment, and was named the best goal of the season by UEFA.[185][186] Despite
+                   a second-leg loss, Barcelona progressed to the final on 6 June in Berlin, where they defeated 
+                   Juventus 3–1 to win their second treble, becoming the first team in history to do so.[187][188]
+                    Although Messi did not score, he participated in each of his side's goals, particularly the second
+                     as he forced a parried save from goalkeeper Gianluigi Buffon from which Suárez scored the 
+                     match-winning goal on the rebound.[177] In addition to being the top assist provider with six
+                      assists, Messi finished the competition as the joint top scorer with ten goals, which earned
+                       him the distinction of being the first player ever to achieve the top scoring mark in five 
+                       Champions League seasons.[189][190] For his efforts during the season, he received the UEFA 
+                       Best Player in Europe award for a second time.
+              </p>
+              <h3>2015–16: Domestic success:</h3>
+            <p>
+                Messi opened the 2015–16 season by scoring twice from free kicks in Barcelona's 5–4 victory (after extra time)
+                 over Sevilla in the UEFA Super Cup.[192] On 16 September, he became the youngest player to make 
+                 100 appearances in the UEFA Champions League in a 1–1 away draw to Roma.[193] After a knee injury,
+                  he returned to the pitch on 21 November, making a substitute appearance in Barcelona's 4–0 away 
+                  win over rivals Real Madrid in El Clásico.[194] Messi capped off the year by winning the 2015
+                   FIFA Club World Cup final on 20 December, collecting his fifth club trophy of 2015 as Barcelona 
+                   defeated River Plate 3–0 in Yokohama.
+                   <br>
+                   <br>
+                   On 11 January 2016, Messi won the FIFA Ballon d'Or for a record fifth time in his
+                    career.[197] On 3 February, he scored a hat-trick in Barcelona's 7–0 win against 
+                    Valencia in the first leg of the Copa del Rey semi-final at the Camp Nou.
+                    <br>
+                    <br>
+                    Messi opened the 2016–17 season by lifting the 2016 Supercopa de España as Barcelona's captain in the 
+                    absence of the injured Andrés Iniesta;[207] he set-up Munir's goal in a 2–0 away win over Sevilla 
+                    in the first leg on 14 August,[208] and subsequently scored in a 3–0 win in the return leg on 17 
+                    August.[209] Three days later, he scored two goals as Barcelona won 6–2 against Real Betis in the 
+                    opening game of the 2016–17 La Liga season.
+                    <br>
+                    <br>
+                    On 4 February 2017, Messi scored his 27th free-kick for Barcelona in a 3–0 home win over Athletic Bilbao 
+                    in the league, overtaking Koeman as the club's all-time top-scorer from free-kicks.[219] On 23 April,
+                     Messi scored twice in a 3–2 away win over Real Madrid. His game-winning goal in stoppage time was his
+                      500th for Barcelona.[220] His memorable celebration saw him taking off his Barcelona shirt and
+                       holding it up to incensed Real Madrid fans – with his name and number facing the crowd.[221] On
+                        27 May, Messi scored a goal and set up another for Paco Alcácer in the 2017 Copa del Rey final,
+                         helping Barcelona to a 3–1 victory over Alavés, and was named Man of the Match.[222] In total,
+                          Messi finished the 2016–17 season with 54 goals, while his 37 goals in La Liga saw him claim 
+                          both the Pichichi and European Golden Boot Awards for the fourth time in his career.
+            </p>
+            <h3>2017–18: Domestic double and a record fifth Golden Boot:</h3>
+            <p>
+                On 4 March, he scored his 600th senior career goal from a free kick in a 1–0 home win over Atlético Madrid, in La Liga.
+                [235] On 14 March, Messi scored his 99th and 100th Champions League goals in a 3–0 home win over
+                 Chelsea, becoming only the second player after Cristiano Ronaldo to reach this landmark, in fewer
+                  appearances, at a younger age and having taken fewer shots than his Portuguese counterpart.[236]
+                   His opening goal, which came after only two minutes and eight seconds, was also the fastest of
+                    his career, as Barcelona advanced to the quarter-finals of the competition for the eleventh 
+                    consecutive season.[237] On 7 April, he scored a hat-trick in a 3–1 win over Leganés including
+                     his sixth goal scored from a free-kick for the season, matching the record set by former 
+                     teammate Ronaldinho.[238] He once again finished the season as the top scorer in La Liga, 
+                     with 34 goals, which also saw him win his fifth Golden Shoe award.[239] On 21 April, Messi
+                      scored Barcelona's second goal – his 40th of the season – in a 5–0 win over Sevilla in the
+                       2018 Copa del Rey final, later also setting up Suárez's second goal; this was Barcelona's
+                        fourth consecutive title and their 30th overall.[240] On 29 April, Messi scored a hat-trick 
+                        in a 4–2 away win over Deportivo de La Coruña, which saw Barcelona claim their 25th league 
+                        title.[241] On 9 May, Messi scored as Barcelona defeated Villarreal 5–1 to set the longest
+                         unbeaten streak (43 games) in La Liga history.
+            </p>
+            <h3>2018–19: Captaincy, 10th La Liga title, and a record sixth Golden Boot:</h3>
+            <p>
+                On 13 January 2019, Messi scored his 400th La Liga goal in his 435th league appearance in a 3–0 home win 
+                over Eibar, becoming the first player ever to manage this tally in just one of Europe's top five
+                 leagues.[248] On 2 February, Messi scored twice in a 2–2 draw against Valencia, with his first
+                  goal coming from the penalty spot, his 50th La Liga penalty goal; as such, he became only the
+                   third player in La Liga history after Cristiano Ronaldo and Hugo Sánchez to score 50 penalties
+                    in the competition.
+                    <br>
+                    <br>
+                    n 27 April, Messi came off the bench and scored the only goal in a 1–0 home win over Levante, which 
+                    allowed Barcelona to clinch the league title;[254] this was his 450th La Liga appearance, and his 
+                    first league title as Barcelona's captain.[255][256] On 1 May, Messi scored twice in a 3–0 home win
+                     over Liverpool in the first leg of the Champions League semi-finals; his second goal of the match,
+                      a 35-yard free kick, was the 600th senior club goal of his career, all of which had been scored
+                       with Barcelona.[257] In the return leg six days later at Anfield, Barcelona suffered a 4–0 away 
+                       defeat, which saw Liverpool advance to the final 4–3 on aggregate.[258] On 19 May, in Barcelona's
+                        final La Liga match of the season, Messi scored twice in a 2–2 away draw against Eibar
+                         (his 49th and 50th goals of the season in all competitions), which saw him capture his sixth
+                          Pichichi Trophy as the league's top scorer, with 36 goals in 34 appearances; with six titles, 
+                          he equalled Zarra as the player with the most top-scorer awards in La Liga.[259][260] He also
+                           captured his sixth Golden Shoe award, and a record third consecutive award since the 2016–17
+                            season.[261] On 25 May, Messi scored his final goal of the season in a 2–1 defeat to Valencia 
+                            in the 2019 Copa del Rey final.
+            </p>
+            <h3>2019–20: Record sixth Ballon d'Or:</h3>
+            <p>
+                On 27 November, in what was his 700th appearance for Barcelona, Messi scored one goal and assisted two 
+                more in a 3–1 home win over Borussia Dortmund in the UEFA Champions League. Dortmund were the 34th
+                 team he had scored against in the competition, breaking the previous record of 33 held by Cristiano
+                  Ronaldo and Raúl.[275] On 2 December, Messi was awarded a record-breaking sixth Ballon d'Or.[276]
+                   On 8 December, Messi scored his record-breaking 35th hat-trick in La Liga with three goals in 
+                   Barcelona's 5–2 home win over Mallorca.
+                <br>
+                <br>
+                On 22 February 2020, Messi scored four goals in a 5–0 home win over Eibar in La Liga.[278]
+                 On 14 June, he scored in a 4–0 away win against Mallorca, becoming the first player ever
+                  in La Liga to score 20 goals or more in 12 consecutive seasons.[279] On 30 June, he 
+                  scored a panenka in a 2–2 home draw against Atlético Madrid in La Liga, to reach his 
+                  700th goal in his senior career for Barcelona and Argentina.[280] On 11 July, Messi
+                   provided his 20th assist of the league season for Arturo Vidal in a 1–0 away win over
+                    Real Valladolid, equalling Xavi's record of 20 assists in a single La Liga season
+                     from 2008 to 2009;[281][282] with 22 goals, he also became only the second player
+                      ever, after Thierry Henry in the 2002–03 FA Premier League season with Arsenal 
+                      (24 goals and 20 assists), to record at least 20 goals and 20 assists in a single
+                       league season in one of Europe's top-five leagues.[282][283] Following his brace 
+                       in a 5–0 away win against Alavés in the final match of the season on 20 May, Messi
+                        finished the season as both the top scorer and top assist provider in La Liga,
+                         with 25 goals and 21 assists respectively, which saw him win his record seventh
+                          Pichichi trophy, overtaking Zarra; however, Barcelona missed out on the league
+                           title to Real Madrid.[284] On 9 August, in the Champions League round of 16
+                            second leg versus Napoli at the Camp Nou, Messi scored the second goal and 
+                            earned a penalty which led to a third goal and led his side to a 3–1 home 
+                            victory and qualified 4–2 on aggregate for the quarter-finals against Bayern 
+                            Munich.[285] On 15 August, Messi suffered his worst defeat as a player as 
+                            Bayern Munich beat Barcelona 8–2 in a one-off tie in Lisbon, leading to
+                             another disappointing exit from the Champions League.
+            </p>
+            <h3>August 2020: Desire to leave Barcelona:</h3>
+            <p>
+                On 4 September, Jorge Messi, Lionel's father and agent, released a statement in response
+                 to La Liga claiming the release clause "is not valid when the termination of the contract
+                  is by the player's unilateral decision from the end of the 2019–20 season", as stated 
+                  in Messi's contract with Barcelona;[294] moments later, La Liga issued a response 
+                  reiterating their statement published on 30 August.[295] Later that evening, Messi 
+                  announced in an interview with Goal that he would continue at Barcelona for the final 
+                  year of his contract. In the interview, Messi claimed to have informed Barcelona of
+                   his desire to leave multiple times, and club president Josep Maria Bartomeu said Messi
+                   
+                   could decide at the end of every season if he wanted to stay or leave, only for
+                    bartomeu to refer to the release clause.[296] This left Messi with two options: to
+                     stay or go to court against the club, with the player saying "I would never go
+                      to court against the club of my life".
+            </p>
+            <h3>
+                2020–21: Final season at Barcelona:
+            </h3>
+            <p>
+                On 1 July, Messi became a free agent after his contract expired,[317] with negotiations on a new 
+                deal complicated due to financial issues at Barcelona.[318] On 5 August, Barcelona 
+                 that Messi would not be staying at the club, even though both parties reached an agreement and 
+                 were due to sign a contract that day.[319] The club cited financial and structural obstacles posed
+                  by La Liga regulations as a reason for Messi's departure.[320] Club president Joan Laporta also
+                   blamed the previous board for Messi's exit by saying "the basis of everything is the calamitous
+                    and disastrous situation left by the previous board", he added by saying "the expected debt is
+                     much higher and we had some sports contracts in place that meant we had no margin on salary"
+                     .[321] Three days later, in a tearful press conference held at the Camp Nou, Messi confirmed 
+                     that he would be leaving Barcelona.
+            </p>
+            <h2><u>Paris Saint-Germain</u></h2>
+            <br>
+            <h3>2021–22: First season adjustments:</h3>
+            <p>
+                On 10 August, Messi joined French club Paris Saint-Germain (PSG).[323] He signed a
+                 two-year deal until June 2023 with an option for an extra year.[324] Messi chose
+                  30 as his squad number, the same he wore as a teenager when he made his senior
+                   debut for Barcelona.<br><br>
+
+Messi made his debut for the club on 29 August, coming on as a substitute in the second half of a
+ 2–0 away win over Reims in Ligue 1.[326] He made his first start and Champions League debut for
+  the club in a 1–1 away draw against Club Brugge on 15 September.[327] Four days later, Messi made
+   his home debut for PSG in a 2–1 win over Lyon.[328] On 28 September, he scored his first goal for
+    the club, a strike from the edge of the 18-yard box in a 2–0 Champions League group stage win over
+     former manager Pep Guardiola's Manchester City.[329] On 21 November, Messi scored his first Ligue 1
+      goal in a 3–1 home victory over Nantes.[330] Later that month, he provided a hat-trick of assists
+       for the fifth time in his career as PSG beat Saint-Étienne 3–1 away from home.[331] Having scored
+        40 goals at club and international level for the calendar year and helped Argentina win the 2021
+         Copa América, Messi received a record seventh Ballon d'Or on 29 November.
+            </p>
+            <h3>2022–23: Return to form and departure:</h3>
+            <p>
+                On 26 February 2023, PSG defeated Marseille 3–0 in Le Classique, with Messi scoring his 700th
+                 senior career club goal as well as assisting two goals for Mbappé.[351] On 11 March, PSG defeated
+                  Brest 2–1, with Messi setting up a last-minute winner for Mbappé, registering his 300th career
+                   assist.[352] On 8 April, he scored and provided an assist in a 2–0 away win over Nice in Ligue 1,
+                    which saw him overtake Cristiano Ronaldo as the all–time highest goalscorer in European club
+                     football with 702 goals; during the match, he also achieved 1,000 career direct goal 
+                     contributions at club level.[353][354] On 2 May, Messi was suspended for two weeks and 
+                     fined after taking an unauthorised trip to Saudi Arabia with his family as part of a
+                      promotional commercial agreement. His visit to Saudi Arabia meant he did not show up to
+                       training the previous day following a 3–1 defeat to Lorient.[355] The next day, on 3 May,
+                       it was reported that Messi would leave PSG at the end of the season, following the expiry
+                        of his contract.[356] Afterwards, several PSG supporters demanded his exit from the club
+                        , viewing his absence as evidence of a team not fighting for the shirt, within a context
+                         of perceived disconnect between themselves and the club's identity.[357] Two days later
+                         , Messi apologised to the club and his teammates for the trip, stating he thought he had
+                          a free day after the match [against Lorient], and already had the trip planned, which
+                          he had canceled previously.[358] On 28 May, Messi scored in a 1–1 draw against Strasbourg 
+                          helping PSG clinch their 11th Ligue 1 title and his second in a row; in the process Messi 
+                          became the player with the most goals in the history of Europe's top five leagues, with 496 
+                          goals.
+            </p>
+            <h2><u>Inter Miami</u></h2>
+            <p>
+                Following confirmation of his departure from PSG, Messi was linked with a return to former club Barcelona,
+                 as well as with a big-money move to Saudi Professional League club Al-Hilal, but his eventual
+                  decision to sign for Major League Soccer club Inter Miami was communicated to Barcelona president 
+                  Joan Laporta by 5 June 2023.[364][365] Barcelona were unable to sign him due to financial 
+                  constraints.[366]<br><br>
+
+On 7 June, Inter Miami posted a video on their social media hinting at the club's signing of Messi, although it did 
+not confirm that he had officially signed yet.[367] On the same day, Messi confirmed his intention to
+ join Miami in a joint interview with Mundo Deportivo and Sport, in which he said that they "haven't 
+ closed it 100 percent"; MLS also stated that the deal had not been finalised.[368] He explained that
+  even though La Liga had accepted everything and was fine for him to return to Barcelona, there were 
+  many things left to be done such as lowering salaries and selling players, and he did not want to go
+   through it again or be responsible for it.[369] He confirmed that other European clubs approached him,
+    but that Barcelona was the only European team he wanted to play for
+            </p>
+
+<hr color="black">
+<h1><u>League Goals by Club, Season & Competition</u></h1>
+<hr color="black">
+
+<table border="2" cellspacing="3" cellpadding="5" bgcolor="#808080" >
+        <tr bgcolor="#A9A9A9">
+            <th rowspan="2">Club</th>
+            <th rowspan="2">Season</th>
+            <th colspan="3">League</th>
+            <th colspan="2">National Cup</th>
+            <th colspan="2">Europe</th>
+            <th colspan="2">Other</th>
+            <th colspan="2">Total</th>
+        </tr>
+        <tr bgcolor="#A9A9A9">
+            <th>Division</th>
+            <th>Apps</th>
+            <th>Goals</th>
+            <th>Apps</th>
+            <th>Goals</th>
+            <th>Apps</th>
+            <th>Goals</th>
+            <th>Apps</th>
+            <th>Goals</th>
+            <th>Apps</th>
+            <th>Goals</th>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td bgcolor="#A9A9A9"><center>Barcelona C</center></td>
+            <td>2003-04</td>
+            <td>Tercera Devision</td>
+            <td>10</td>
+            <td>5</td>
+            <th colspan="2">-</th>
+            <th colspan="2">-</th>
+            <th colspan="2">-</th>
+            <td>10</td>
+            <td>5</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td bgcolor="#A9A9A9" rowspan="3"> <center>Barcelona B</center></td>
+            <td>2003-04</td>
+            <td>Segunda Devision B</td>
+            <td>5</td>
+            <td>0</td>
+            <th colspan="2">-</th>
+            <th colspan="2">-</th>
+            <th colspan="2">-</th>
+            <td>5</td>
+            <td>0</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2004-05</td>
+            <td>Segunda Devision B</td>
+            <td>17</td>
+            <td>6</td>
+            <th colspan="2">-</th>
+            <th colspan="2">-</th>
+            <th colspan="2">-</th>
+            <td>17</td>
+            <td>6</td>
+        </tr>
+        <tr bgcolor="#A9A9A9">
+            <th  colspan="2">Total</th>
+            <th>22</th>
+            <th>6</th>
+            <th colspan="2">-</th>
+            <th colspan="2">-</th>
+            <th colspan="2">-</th>
+            <th>22</th>
+            <th>6</th>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <th rowspan="18" bgcolor="#A9A9A9">Barcelona</th>
+            <td>2004-05</td>
+            <td><center>Laliga</center></td>
+            <td>7</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <th colspan="2">-</th>
+            <td>9</td>
+            <td>1</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2005-06</td>
+            <td><center>Laliga</center></td>
+            <td>17</td>
+            <td>6</td>
+            <td>2</td>
+            <td>1</td>
+            <td>6</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>25</td>
+            <td>28</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2006-07</td>
+            <td><center>Laliga</center></td>
+            <td>26</td>
+            <td>14</td>
+            <td>2</td>
+            <td>2</td>
+            <td>5</td>
+            <td>1</td>
+            <td>3</td>
+            <td>0</td>
+            <td>26</td>
+            <td>17</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2007-08</td>
+            <td><center>Laliga</center></td>
+            <td>28</td>
+            <td>10</td>
+            <td>3</td>
+            <td>0</td>
+            <td>9</td>
+            <td>6</td>
+            <th colspan="2">-</th>
+            <td>40</td>
+            <td>16</td>
+            
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2008-09</td>
+            <td><center>Laliga</center></td>
+            <td>31</td>
+            <td>23</td>
+            <td>8</td>
+            <td>6</td>
+            <td>12</td>
+            <td>9</td>
+            <th colspan="2">-</th>
+            <td>51</td>
+            <td>38</td>
+            
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2009-10</td>
+            <td><center>Laliga</center></td>
+            <td>35</td>
+            <td>34</td>
+            <td>3</td>
+            <td>1</td>
+            <td>11</td>
+            <td>8</td>
+            <td>4</td>
+            <td>4</td>
+            <td>53</td>
+            <td>47</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2010-11</td>
+            <td><center>Laliga</center></td>
+            <td>33</td>
+            <td>31</td>
+            <td>7</td>
+            <td>7</td>
+            <td>13</td>
+            <td>12</td>
+            <td>2</td>
+            <td>3</td>
+            <td>55</td>
+            <td>53</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2011-12</td>
+            <td><center>Laliga</center></td>
+            <td>37</td>
+            <td>50</td>
+            <td>7</td>
+            <td>3</td>
+            <td>11</td>
+            <td>14</td>
+            <td>5</td>
+            <td>6</td>
+            <td>60</td>
+            <td>73</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2012-13</td>
+            <td><center>Laliga</center></td>
+            <td>32</td>
+            <td>46</td>
+            <td>5</td>
+            <td>4</td>
+            <td>11</td>
+            <td>8</td>
+            <td>2</td>
+            <td>2</td>
+            <td>50</td>
+            <td>60</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2013-14</td>
+            <td><center>Laliga</center></td>
+            <td>31</td>
+            <td>28</td>
+            <td>6</td>
+            <td>5</td>
+            <td>7</td>
+            <td>8</td>
+            <td>2</td>
+            <td>0</td>
+            <td>46</td>
+            <td>41</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2014-15</td>
+            <td><center>Laliga</center></td>
+            <td>38</td>
+            <td>43</td>
+            <td>6</td>
+            <td>5</td>
+            <td>13</td>
+            <td>10</td>
+            <th colspan="2">-</th>
+            <td>57</td>
+            <td>58</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2015-16</td>
+            <td><center>Laliga</center></td>
+            <td>33</td>
+            <td>26</td>
+            <td>5</td>
+            <td>5</td>
+            <td>7</td>
+            <td>6</td>
+            <td>4</td>
+            <td>4</td>
+            <td>49</td>
+            <td>41</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2016-17</td>
+            <td><center>Laliga</center></td>
+            <td>34</td>
+            <td>37</td>
+            <td>7</td>
+            <td>5</td>
+            <td>9</td>
+            <td>11</td>
+            <td>2</td>
+            <td>1</td>
+            <td>52</td>
+            <td>54</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2017-18</td>
+            <td><center>Laliga</center></td>
+            <td>36</td>
+            <td>34</td>
+            <td>6</td>
+            <td>4</td>
+            <td>10</td>
+            <td>6</td>
+            <td>2</td>
+            <td>1</td>
+            <td>54</td>
+            <td>45</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2018-19</td>
+            <td><center>Laliga</center></td>
+            <td>34</td>
+            <td>36</td>
+            <td>5</td>
+            <td>3</td>
+            <td>10</td>
+            <td>12</td>
+            <td>1</td>
+            <td>0</td>
+            <td>50</td>
+            <td>51</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2019-20</td>
+            <td><center>Laliga</center></td>
+            <td>33</td>
+            <td>25</td>
+            <td>2</td>
+            <td>2</td>
+            <td>8</td>
+            <td>3</td>
+            <td>1</td>
+            <td>1</td>
+            <td>44</td>
+            <td>31</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2020-21</td>
+            <td><center>Laliga</center></td>
+            <td>35</td>
+            <td>30</td>
+            <td>5</td>
+            <td>3</td>
+            <td>6</td>
+            <td>5</td>
+            <td>1</td>
+            <td>0</td>
+            <td>47</td>
+            <td>38</td>
+        </tr>
+        <tr bgcolor="#A9A9A9">
+            <th colspan="2">Total</th>
+            <th>520</th>
+            <th>474</th>
+            <th>80</th>
+            <th>56</th>
+            <th>149</th>
+            <th>120</th>
+            <th>29</th>
+            <th>22</th>
+            <th>778</th>
+            <th>672</th> 
+        </tr>
+        <tr bgcolor="#cccccc">
+            <th rowspan="3" bgcolor="#A9A9A9">Paris Saint-Germain</th>
+            <td>2021-22</td>
+            <td><center>League 1</center></td>
+            <td>26</td>
+            <td>6</td>
+            <td>1</td>
+            <td>0</td>
+            <td>7</td>
+            <td>5</td>
+            <th colspan="2">-</th>
+            <td>34</td>
+            <td>11</td>
+        </tr>
+        <tr bgcolor="#cccccc">
+            <td>2022-23</td>
+            <td><center>League 1</center></td>
+            <td>32</td>
+            <td>16</td>
+            <td>1</td>
+            <td>0</td>
+            <td>7</td>
+            <td>4</td>
+            <td>1</td>
+            <td>1</td>
+            <td>41</td>
+            <td>21</td>
+        </tr>
+        <tr bgcolor="#A9A9A9">
+            <th colspan="2">Total</th>
+            <th>58</th>
+            <th>22</th>
+            <th>2</th>
+            <th>0</th>
+            <th>14</th>
+            <th>9</th>
+            <th>1</th>
+            <th>1</th>
+            <th>75</th>
+            <th>32</th>
+        </tr>
+        <tr bgcolor="#A9A9A9">
+            <th colspan="3">Career Total</th>
+            <th>610</th>
+            <th>507</th>
+            <th>82</th>
+            <th>56</th>
+            <th>163</th>
+            <th>129</th>
+            <th>30</th>
+            <th>23</th>
+            <th>885</th>
+            <th>715</th>
+        </tr>
+
+
+</table>
+
+   
+
+
+
+
+</body></html>
